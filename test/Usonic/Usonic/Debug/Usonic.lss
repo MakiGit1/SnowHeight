@@ -1,0 +1,1466 @@
+
+Usonic.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800200  00800200  00000866  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000007f2  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000006  00800200  00800200  00000866  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000866  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000898  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000128  00000000  00000000  000008d8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000026a2  00000000  00000000  00000a00  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00001318  00000000  00000000  000030a2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000887  00000000  00000000  000043ba  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000454  00000000  00000000  00004c44  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000ae7  00000000  00000000  00005098  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000013b6  00000000  00000000  00005b7f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000170  00000000  00000000  00006f35  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	73 c0       	rjmp	.+230    	; 0xe8 <__ctors_end>
+   2:	00 00       	nop
+   4:	92 c0       	rjmp	.+292    	; 0x12a <__bad_interrupt>
+   6:	00 00       	nop
+   8:	90 c0       	rjmp	.+288    	; 0x12a <__bad_interrupt>
+   a:	00 00       	nop
+   c:	8e c0       	rjmp	.+284    	; 0x12a <__bad_interrupt>
+   e:	00 00       	nop
+  10:	d0 c0       	rjmp	.+416    	; 0x1b2 <__vector_4>
+  12:	00 00       	nop
+  14:	8a c0       	rjmp	.+276    	; 0x12a <__bad_interrupt>
+  16:	00 00       	nop
+  18:	88 c0       	rjmp	.+272    	; 0x12a <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	86 c0       	rjmp	.+268    	; 0x12a <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	84 c0       	rjmp	.+264    	; 0x12a <__bad_interrupt>
+  22:	00 00       	nop
+  24:	82 c0       	rjmp	.+260    	; 0x12a <__bad_interrupt>
+  26:	00 00       	nop
+  28:	80 c0       	rjmp	.+256    	; 0x12a <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	7e c0       	rjmp	.+252    	; 0x12a <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	7c c0       	rjmp	.+248    	; 0x12a <__bad_interrupt>
+  32:	00 00       	nop
+  34:	7a c0       	rjmp	.+244    	; 0x12a <__bad_interrupt>
+  36:	00 00       	nop
+  38:	78 c0       	rjmp	.+240    	; 0x12a <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	76 c0       	rjmp	.+236    	; 0x12a <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	74 c0       	rjmp	.+232    	; 0x12a <__bad_interrupt>
+  42:	00 00       	nop
+  44:	72 c0       	rjmp	.+228    	; 0x12a <__bad_interrupt>
+  46:	00 00       	nop
+  48:	70 c0       	rjmp	.+224    	; 0x12a <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	6e c0       	rjmp	.+220    	; 0x12a <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	6c c0       	rjmp	.+216    	; 0x12a <__bad_interrupt>
+  52:	00 00       	nop
+  54:	6a c0       	rjmp	.+212    	; 0x12a <__bad_interrupt>
+  56:	00 00       	nop
+  58:	68 c0       	rjmp	.+208    	; 0x12a <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	66 c0       	rjmp	.+204    	; 0x12a <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	64 c0       	rjmp	.+200    	; 0x12a <__bad_interrupt>
+  62:	00 00       	nop
+  64:	62 c0       	rjmp	.+196    	; 0x12a <__bad_interrupt>
+  66:	00 00       	nop
+  68:	60 c0       	rjmp	.+192    	; 0x12a <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	5e c0       	rjmp	.+188    	; 0x12a <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	5c c0       	rjmp	.+184    	; 0x12a <__bad_interrupt>
+  72:	00 00       	nop
+  74:	5a c0       	rjmp	.+180    	; 0x12a <__bad_interrupt>
+  76:	00 00       	nop
+  78:	58 c0       	rjmp	.+176    	; 0x12a <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	56 c0       	rjmp	.+172    	; 0x12a <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	54 c0       	rjmp	.+168    	; 0x12a <__bad_interrupt>
+  82:	00 00       	nop
+  84:	52 c0       	rjmp	.+164    	; 0x12a <__bad_interrupt>
+  86:	00 00       	nop
+  88:	50 c0       	rjmp	.+160    	; 0x12a <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	4e c0       	rjmp	.+156    	; 0x12a <__bad_interrupt>
+  8e:	00 00       	nop
+  90:	4c c0       	rjmp	.+152    	; 0x12a <__bad_interrupt>
+  92:	00 00       	nop
+  94:	4a c0       	rjmp	.+148    	; 0x12a <__bad_interrupt>
+  96:	00 00       	nop
+  98:	48 c0       	rjmp	.+144    	; 0x12a <__bad_interrupt>
+  9a:	00 00       	nop
+  9c:	46 c0       	rjmp	.+140    	; 0x12a <__bad_interrupt>
+  9e:	00 00       	nop
+  a0:	44 c0       	rjmp	.+136    	; 0x12a <__bad_interrupt>
+  a2:	00 00       	nop
+  a4:	42 c0       	rjmp	.+132    	; 0x12a <__bad_interrupt>
+  a6:	00 00       	nop
+  a8:	40 c0       	rjmp	.+128    	; 0x12a <__bad_interrupt>
+  aa:	00 00       	nop
+  ac:	3e c0       	rjmp	.+124    	; 0x12a <__bad_interrupt>
+  ae:	00 00       	nop
+  b0:	3c c0       	rjmp	.+120    	; 0x12a <__bad_interrupt>
+  b2:	00 00       	nop
+  b4:	3a c0       	rjmp	.+116    	; 0x12a <__bad_interrupt>
+  b6:	00 00       	nop
+  b8:	38 c0       	rjmp	.+112    	; 0x12a <__bad_interrupt>
+  ba:	00 00       	nop
+  bc:	5d c0       	rjmp	.+186    	; 0x178 <__vector_47>
+  be:	00 00       	nop
+  c0:	34 c0       	rjmp	.+104    	; 0x12a <__bad_interrupt>
+  c2:	00 00       	nop
+  c4:	32 c0       	rjmp	.+100    	; 0x12a <__bad_interrupt>
+  c6:	00 00       	nop
+  c8:	3e c0       	rjmp	.+124    	; 0x146 <__vector_50>
+  ca:	00 00       	nop
+  cc:	2e c0       	rjmp	.+92     	; 0x12a <__bad_interrupt>
+  ce:	00 00       	nop
+  d0:	2c c0       	rjmp	.+88     	; 0x12a <__bad_interrupt>
+  d2:	00 00       	nop
+  d4:	2a c0       	rjmp	.+84     	; 0x12a <__bad_interrupt>
+  d6:	00 00       	nop
+  d8:	28 c0       	rjmp	.+80     	; 0x12a <__bad_interrupt>
+  da:	00 00       	nop
+  dc:	26 c0       	rjmp	.+76     	; 0x12a <__bad_interrupt>
+  de:	00 00       	nop
+  e0:	24 c0       	rjmp	.+72     	; 0x12a <__bad_interrupt>
+	...
+
+000000e4 <__ctors_start>:
+  e4:	ad 01       	movw	r20, r26
+  e6:	1f 03       	fmul	r17, r23
+
+000000e8 <__ctors_end>:
+  e8:	11 24       	eor	r1, r1
+  ea:	1f be       	out	0x3f, r1	; 63
+  ec:	cf ef       	ldi	r28, 0xFF	; 255
+  ee:	d1 e2       	ldi	r29, 0x21	; 33
+  f0:	de bf       	out	0x3e, r29	; 62
+  f2:	cd bf       	out	0x3d, r28	; 61
+  f4:	00 e0       	ldi	r16, 0x00	; 0
+  f6:	0c bf       	out	0x3c, r16	; 60
+
+000000f8 <__do_clear_bss>:
+  f8:	22 e0       	ldi	r18, 0x02	; 2
+  fa:	a0 e0       	ldi	r26, 0x00	; 0
+  fc:	b2 e0       	ldi	r27, 0x02	; 2
+  fe:	01 c0       	rjmp	.+2      	; 0x102 <.do_clear_bss_start>
+
+00000100 <.do_clear_bss_loop>:
+ 100:	1d 92       	st	X+, r1
+
+00000102 <.do_clear_bss_start>:
+ 102:	a6 30       	cpi	r26, 0x06	; 6
+ 104:	b2 07       	cpc	r27, r18
+ 106:	e1 f7       	brne	.-8      	; 0x100 <.do_clear_bss_loop>
+
+00000108 <__do_global_ctors>:
+ 108:	10 e0       	ldi	r17, 0x00	; 0
+ 10a:	c4 e7       	ldi	r28, 0x74	; 116
+ 10c:	d0 e0       	ldi	r29, 0x00	; 0
+ 10e:	00 e0       	ldi	r16, 0x00	; 0
+ 110:	05 c0       	rjmp	.+10     	; 0x11c <__do_global_ctors+0x14>
+ 112:	21 97       	sbiw	r28, 0x01	; 1
+ 114:	01 09       	sbc	r16, r1
+ 116:	80 2f       	mov	r24, r16
+ 118:	fe 01       	movw	r30, r28
+ 11a:	1f d3       	rcall	.+1598   	; 0x75a <__tablejump2__>
+ 11c:	c2 37       	cpi	r28, 0x72	; 114
+ 11e:	d1 07       	cpc	r29, r17
+ 120:	80 e0       	ldi	r24, 0x00	; 0
+ 122:	08 07       	cpc	r16, r24
+ 124:	b1 f7       	brne	.-20     	; 0x112 <__do_global_ctors+0xa>
+ 126:	02 d0       	rcall	.+4      	; 0x12c <main>
+ 128:	62 c3       	rjmp	.+1732   	; 0x7ee <_exit>
+
+0000012a <__bad_interrupt>:
+ 12a:	6a cf       	rjmp	.-300    	; 0x0 <__vectors>
+
+0000012c <main>:
+
+int main(void)
+{	
+    while (1) 
+    {
+		sei();
+ 12c:	78 94       	sei
+		uart.enable();
+ 12e:	80 e0       	ldi	r24, 0x00	; 0
+ 130:	92 e0       	ldi	r25, 0x02	; 2
+ 132:	b0 d0       	rcall	.+352    	; 0x294 <_ZN6myUart6enableEv>
+		
+		
+		uart.write((uint16_t)uSonic.getAverageDistance(), true);
+ 134:	82 e0       	ldi	r24, 0x02	; 2
+ 136:	92 e0       	ldi	r25, 0x02	; 2
+ 138:	b6 d1       	rcall	.+876    	; 0x4a6 <_ZN6usonic18getAverageDistanceEv>
+ 13a:	41 e0       	ldi	r20, 0x01	; 1
+ 13c:	bc 01       	movw	r22, r24
+ 13e:	80 e0       	ldi	r24, 0x00	; 0
+ 140:	92 e0       	ldi	r25, 0x02	; 2
+ 142:	e8 d0       	rcall	.+464    	; 0x314 <_ZN6myUart5writeEjb>
+#include "configuration.h"
+#include "usonic/usonic.h"
+#include "usart/myUart.h"
+
+
+int main(void)
+ 144:	f3 cf       	rjmp	.-26     	; 0x12c <main>
+
+00000146 <__vector_50>:
+		uart.write((uint16_t)uSonic.getAverageDistance(), true);
+    }
+}
+
+ISR(usonicOVF_ISR)
+{
+ 146:	1f 92       	push	r1
+ 148:	0f 92       	push	r0
+ 14a:	0f b6       	in	r0, 0x3f	; 63
+ 14c:	0f 92       	push	r0
+ 14e:	11 24       	eor	r1, r1
+ 150:	0b b6       	in	r0, 0x3b	; 59
+ 152:	0f 92       	push	r0
+ 154:	8f 93       	push	r24
+ 156:	ef 93       	push	r30
+ 158:	ff 93       	push	r31
+
+		void setDistance(uint16_t millimeter) { _distance = millimeter; }
+		uint16_t getAverageDistance();
+		uint16_t getDistance() { return _distance; }
+		
+		void setOverflows(uint8_t overflows) { _overflows = overflows; }
+ 15a:	e2 e0       	ldi	r30, 0x02	; 2
+ 15c:	f2 e0       	ldi	r31, 0x02	; 2
+	//Too far -> Increase Overflow
+	uSonic.setOverflows(uSonic.getOverflows() + 1);
+ 15e:	81 81       	ldd	r24, Z+1	; 0x01
+ 160:	8f 5f       	subi	r24, 0xFF	; 255
+ 162:	81 83       	std	Z+1, r24	; 0x01
+}
+ 164:	ff 91       	pop	r31
+ 166:	ef 91       	pop	r30
+ 168:	8f 91       	pop	r24
+ 16a:	0f 90       	pop	r0
+ 16c:	0b be       	out	0x3b, r0	; 59
+ 16e:	0f 90       	pop	r0
+ 170:	0f be       	out	0x3f, r0	; 63
+ 172:	0f 90       	pop	r0
+ 174:	1f 90       	pop	r1
+ 176:	18 95       	reti
+
+00000178 <__vector_47>:
+
+ISR(USONIC_OCRA_ISR)
+{
+ 178:	1f 92       	push	r1
+ 17a:	0f 92       	push	r0
+ 17c:	0f b6       	in	r0, 0x3f	; 63
+ 17e:	0f 92       	push	r0
+ 180:	11 24       	eor	r1, r1
+ 182:	0b b6       	in	r0, 0x3b	; 59
+ 184:	0f 92       	push	r0
+ 186:	8f 93       	push	r24
+ 188:	ef 93       	push	r30
+ 18a:	ff 93       	push	r31
+	//Restarts the 16bit Timer when the TriggerPin is active
+	if (
+ 18c:	4f 9b       	sbis	0x09, 7	; 9
+ 18e:	07 c0       	rjmp	.+14     	; 0x19e <__vector_47+0x26>
+	USONIC_PIN & (1 << USONIC_TRIGGER_PIN))
+	{
+		USONIC_PRESCALER0();
+ 190:	e1 e2       	ldi	r30, 0x21	; 33
+ 192:	f1 e0       	ldi	r31, 0x01	; 1
+ 194:	80 81       	ld	r24, Z
+ 196:	88 7f       	andi	r24, 0xF8	; 248
+ 198:	80 83       	st	Z, r24
+		USONIC_PORT &= ~(1 << USONIC_TRIGGER_PIN);
+ 19a:	5f 98       	cbi	0x0b, 7	; 11
+		EIMSK |= (1 << USONIC_ECHO_INT);				// ext. INT 3
+ 19c:	eb 9a       	sbi	0x1d, 3	; 29
+	}
+}
+ 19e:	ff 91       	pop	r31
+ 1a0:	ef 91       	pop	r30
+ 1a2:	8f 91       	pop	r24
+ 1a4:	0f 90       	pop	r0
+ 1a6:	0b be       	out	0x3b, r0	; 59
+ 1a8:	0f 90       	pop	r0
+ 1aa:	0f be       	out	0x3f, r0	; 63
+ 1ac:	0f 90       	pop	r0
+ 1ae:	1f 90       	pop	r1
+ 1b0:	18 95       	reti
+
+000001b2 <__vector_4>:
+
+ISR(USONIC_ECHO_ISR)
+{	
+ 1b2:	1f 92       	push	r1
+ 1b4:	0f 92       	push	r0
+ 1b6:	0f b6       	in	r0, 0x3f	; 63
+ 1b8:	0f 92       	push	r0
+ 1ba:	11 24       	eor	r1, r1
+ 1bc:	0b b6       	in	r0, 0x3b	; 59
+ 1be:	0f 92       	push	r0
+ 1c0:	0f 93       	push	r16
+ 1c2:	1f 93       	push	r17
+ 1c4:	2f 93       	push	r18
+ 1c6:	3f 93       	push	r19
+ 1c8:	4f 93       	push	r20
+ 1ca:	5f 93       	push	r21
+ 1cc:	6f 93       	push	r22
+ 1ce:	7f 93       	push	r23
+ 1d0:	8f 93       	push	r24
+ 1d2:	9f 93       	push	r25
+ 1d4:	af 93       	push	r26
+ 1d6:	bf 93       	push	r27
+ 1d8:	cf 93       	push	r28
+ 1da:	df 93       	push	r29
+ 1dc:	ef 93       	push	r30
+ 1de:	ff 93       	push	r31
+	//Check if Interrupt was caused by raising edge or falling edge
+	if (USONIC_PIN & (1 << USONIC_ECHO_PIN))
+ 1e0:	4b 9b       	sbis	0x09, 3	; 9
+ 1e2:	0a c0       	rjmp	.+20     	; 0x1f8 <__vector_4+0x46>
+	{
+		// raising edge detection
+		USONIC_TCNT = 0;
+ 1e4:	10 92 25 01 	sts	0x0125, r1	; 0x800125 <__TEXT_REGION_LENGTH__+0x700125>
+ 1e8:	10 92 24 01 	sts	0x0124, r1	; 0x800124 <__TEXT_REGION_LENGTH__+0x700124>
+		USONIC_PRESCALER1();		
+ 1ec:	e1 e2       	ldi	r30, 0x21	; 33
+ 1ee:	f1 e0       	ldi	r31, 0x01	; 1
+ 1f0:	80 81       	ld	r24, Z
+ 1f2:	81 60       	ori	r24, 0x01	; 1
+ 1f4:	80 83       	st	Z, r24
+ 1f6:	27 c0       	rjmp	.+78     	; 0x246 <__vector_4+0x94>
+	}
+	else
+	{
+		// falling edge detection
+		USONIC_PRESCALER0();
+ 1f8:	e1 e2       	ldi	r30, 0x21	; 33
+ 1fa:	f1 e0       	ldi	r31, 0x01	; 1
+ 1fc:	80 81       	ld	r24, Z
+ 1fe:	88 7f       	andi	r24, 0xF8	; 248
+ 200:	80 83       	st	Z, r24
+		EIMSK &= ~(1 << USONIC_ECHO_INT);
+ 202:	eb 98       	cbi	0x1d, 3	; 29
+		cli();
+ 204:	f8 94       	cli
+
+		//TODO: Get the real Temperature * 10
+		uint16_t convertedDistance = uSonic.convertDistance((uSonic.getOverflows() * UINT16_MAX) + USONIC_TCNT, 200);
+ 206:	04 e2       	ldi	r16, 0x24	; 36
+ 208:	11 e0       	ldi	r17, 0x01	; 1
+ 20a:	f8 01       	movw	r30, r16
+ 20c:	20 81       	ld	r18, Z
+ 20e:	31 81       	ldd	r19, Z+1	; 0x01
+		uint8_t getOverflows() { return _overflows; }
+ 210:	c2 e0       	ldi	r28, 0x02	; 2
+ 212:	d2 e0       	ldi	r29, 0x02	; 2
+ 214:	69 81       	ldd	r22, Y+1	; 0x01
+ 216:	86 2f       	mov	r24, r22
+ 218:	90 e0       	ldi	r25, 0x00	; 0
+ 21a:	a0 e0       	ldi	r26, 0x00	; 0
+ 21c:	b0 e0       	ldi	r27, 0x00	; 0
+ 21e:	dc 01       	movw	r26, r24
+ 220:	99 27       	eor	r25, r25
+ 222:	88 27       	eor	r24, r24
+ 224:	bc 01       	movw	r22, r24
+ 226:	cd 01       	movw	r24, r26
+ 228:	62 0f       	add	r22, r18
+ 22a:	73 1f       	adc	r23, r19
+ 22c:	81 1d       	adc	r24, r1
+ 22e:	91 1d       	adc	r25, r1
+ 230:	48 ec       	ldi	r20, 0xC8	; 200
+ 232:	50 e0       	ldi	r21, 0x00	; 0
+ 234:	d2 d0       	rcall	.+420    	; 0x3da <_ZN6usonic15convertDistanceEmj>
+
+		//Getter and Setter functions
+		bool isReady() { return _ready; }
+		void setReady(bool ready) { _ready = ready; }
+
+		void setDistance(uint16_t millimeter) { _distance = millimeter; }
+ 236:	9b 83       	std	Y+3, r25	; 0x03
+ 238:	8a 83       	std	Y+2, r24	; 0x02
+		uSonic.setDistance(convertedDistance);
+		sei();
+ 23a:	78 94       	sei
+
+		void startMeasurement();
+
+		//Getter and Setter functions
+		bool isReady() { return _ready; }
+		void setReady(bool ready) { _ready = ready; }
+ 23c:	81 e0       	ldi	r24, 0x01	; 1
+ 23e:	88 83       	st	Y, r24
+		uSonic.setReady(true);
+
+		USONIC_TCNT = 0;
+ 240:	f8 01       	movw	r30, r16
+ 242:	11 82       	std	Z+1, r1	; 0x01
+ 244:	10 82       	st	Z, r1
+	}
+ 246:	ff 91       	pop	r31
+ 248:	ef 91       	pop	r30
+ 24a:	df 91       	pop	r29
+ 24c:	cf 91       	pop	r28
+ 24e:	bf 91       	pop	r27
+ 250:	af 91       	pop	r26
+ 252:	9f 91       	pop	r25
+ 254:	8f 91       	pop	r24
+ 256:	7f 91       	pop	r23
+ 258:	6f 91       	pop	r22
+ 25a:	5f 91       	pop	r21
+ 25c:	4f 91       	pop	r20
+ 25e:	3f 91       	pop	r19
+ 260:	2f 91       	pop	r18
+ 262:	1f 91       	pop	r17
+ 264:	0f 91       	pop	r16
+ 266:	0f 90       	pop	r0
+ 268:	0b be       	out	0x3b, r0	; 59
+ 26a:	0f 90       	pop	r0
+ 26c:	0f be       	out	0x3f, r0	; 63
+ 26e:	0f 90       	pop	r0
+ 270:	1f 90       	pop	r1
+ 272:	18 95       	reti
+
+00000274 <_ZN6myUartC1Ev>:
+ * \return void
+ */
+void myUart::write(double d, uint8_t precision /*= 2*/, bool linefeed /*= false*/) {
+	char s[12];
+	write(dtostrf(d, 9, precision, s), linefeed);
+}
+ 274:	23 e3       	ldi	r18, 0x33	; 51
+ 276:	30 e0       	ldi	r19, 0x00	; 0
+ 278:	fc 01       	movw	r30, r24
+ 27a:	31 83       	std	Z+1, r19	; 0x01
+ 27c:	20 83       	st	Z, r18
+ 27e:	10 92 c5 00 	sts	0x00C5, r1	; 0x8000c5 <__TEXT_REGION_LENGTH__+0x7000c5>
+ 282:	80 81       	ld	r24, Z
+ 284:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7000c4>
+ 288:	e2 ec       	ldi	r30, 0xC2	; 194
+ 28a:	f0 e0       	ldi	r31, 0x00	; 0
+ 28c:	80 81       	ld	r24, Z
+ 28e:	86 60       	ori	r24, 0x06	; 6
+ 290:	80 83       	st	Z, r24
+ 292:	08 95       	ret
+
+00000294 <_ZN6myUart6enableEv>:
+ 294:	e1 ec       	ldi	r30, 0xC1	; 193
+ 296:	f0 e0       	ldi	r31, 0x00	; 0
+ 298:	80 81       	ld	r24, Z
+ 29a:	88 61       	ori	r24, 0x18	; 24
+ 29c:	80 83       	st	Z, r24
+ 29e:	08 95       	ret
+
+000002a0 <_ZN6myUart4LfCrEv>:
+ 2a0:	e0 ec       	ldi	r30, 0xC0	; 192
+ 2a2:	f0 e0       	ldi	r31, 0x00	; 0
+ 2a4:	80 81       	ld	r24, Z
+ 2a6:	85 ff       	sbrs	r24, 5
+ 2a8:	fd cf       	rjmp	.-6      	; 0x2a4 <_ZN6myUart4LfCrEv+0x4>
+ 2aa:	8a e0       	ldi	r24, 0x0A	; 10
+ 2ac:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+ 2b0:	e0 ec       	ldi	r30, 0xC0	; 192
+ 2b2:	f0 e0       	ldi	r31, 0x00	; 0
+ 2b4:	80 81       	ld	r24, Z
+ 2b6:	85 ff       	sbrs	r24, 5
+ 2b8:	fd cf       	rjmp	.-6      	; 0x2b4 <_ZN6myUart4LfCrEv+0x14>
+ 2ba:	8d e0       	ldi	r24, 0x0D	; 13
+ 2bc:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+ 2c0:	08 95       	ret
+
+000002c2 <_ZN6myUart5writeEhb>:
+ 2c2:	9c 01       	movw	r18, r24
+ 2c4:	e0 ec       	ldi	r30, 0xC0	; 192
+ 2c6:	f0 e0       	ldi	r31, 0x00	; 0
+ 2c8:	90 81       	ld	r25, Z
+ 2ca:	95 ff       	sbrs	r25, 5
+ 2cc:	fd cf       	rjmp	.-6      	; 0x2c8 <_ZN6myUart5writeEhb+0x6>
+ 2ce:	60 93 c6 00 	sts	0x00C6, r22	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+ 2d2:	44 23       	and	r20, r20
+ 2d4:	11 f0       	breq	.+4      	; 0x2da <_ZN6myUart5writeEhb+0x18>
+ 2d6:	c9 01       	movw	r24, r18
+ 2d8:	e3 cf       	rjmp	.-58     	; 0x2a0 <_ZN6myUart4LfCrEv>
+ 2da:	08 95       	ret
+
+000002dc <_ZN6myUart5writeEPcb>:
+ 2dc:	ff 92       	push	r15
+ 2de:	0f 93       	push	r16
+ 2e0:	1f 93       	push	r17
+ 2e2:	cf 93       	push	r28
+ 2e4:	df 93       	push	r29
+ 2e6:	8c 01       	movw	r16, r24
+ 2e8:	eb 01       	movw	r28, r22
+ 2ea:	f4 2e       	mov	r15, r20
+ 2ec:	68 81       	ld	r22, Y
+ 2ee:	66 23       	and	r22, r22
+ 2f0:	39 f0       	breq	.+14     	; 0x300 <_ZN6myUart5writeEPcb+0x24>
+ 2f2:	21 96       	adiw	r28, 0x01	; 1
+ 2f4:	40 e0       	ldi	r20, 0x00	; 0
+ 2f6:	c8 01       	movw	r24, r16
+ 2f8:	e4 df       	rcall	.-56     	; 0x2c2 <_ZN6myUart5writeEhb>
+ 2fa:	69 91       	ld	r22, Y+
+ 2fc:	61 11       	cpse	r22, r1
+ 2fe:	fa cf       	rjmp	.-12     	; 0x2f4 <_ZN6myUart5writeEPcb+0x18>
+ 300:	ff 20       	and	r15, r15
+ 302:	11 f0       	breq	.+4      	; 0x308 <_ZN6myUart5writeEPcb+0x2c>
+ 304:	c8 01       	movw	r24, r16
+ 306:	cc df       	rcall	.-104    	; 0x2a0 <_ZN6myUart4LfCrEv>
+ 308:	df 91       	pop	r29
+ 30a:	cf 91       	pop	r28
+ 30c:	1f 91       	pop	r17
+ 30e:	0f 91       	pop	r16
+ 310:	ff 90       	pop	r15
+ 312:	08 95       	ret
+
+00000314 <_ZN6myUart5writeEjb>:
+ 314:	ff 92       	push	r15
+ 316:	0f 93       	push	r16
+ 318:	1f 93       	push	r17
+ 31a:	cf 93       	push	r28
+ 31c:	df 93       	push	r29
+ 31e:	00 d0       	rcall	.+0      	; 0x320 <_ZN6myUart5writeEjb+0xc>
+ 320:	00 d0       	rcall	.+0      	; 0x322 <_ZN6myUart5writeEjb+0xe>
+ 322:	cd b7       	in	r28, 0x3d	; 61
+ 324:	de b7       	in	r29, 0x3e	; 62
+ 326:	8c 01       	movw	r16, r24
+ 328:	cb 01       	movw	r24, r22
+ 32a:	f4 2e       	mov	r15, r20
+ 32c:	4a e0       	ldi	r20, 0x0A	; 10
+ 32e:	be 01       	movw	r22, r28
+ 330:	6f 5f       	subi	r22, 0xFF	; 255
+ 332:	7f 4f       	sbci	r23, 0xFF	; 255
+ 334:	29 d2       	rcall	.+1106   	; 0x788 <__itoa_ncheck>
+ 336:	4f 2d       	mov	r20, r15
+ 338:	be 01       	movw	r22, r28
+ 33a:	6f 5f       	subi	r22, 0xFF	; 255
+ 33c:	7f 4f       	sbci	r23, 0xFF	; 255
+ 33e:	c8 01       	movw	r24, r16
+ 340:	cd df       	rcall	.-102    	; 0x2dc <_ZN6myUart5writeEPcb>
+ 342:	26 96       	adiw	r28, 0x06	; 6
+ 344:	0f b6       	in	r0, 0x3f	; 63
+ 346:	f8 94       	cli
+ 348:	de bf       	out	0x3e, r29	; 62
+ 34a:	0f be       	out	0x3f, r0	; 63
+ 34c:	cd bf       	out	0x3d, r28	; 61
+ 34e:	df 91       	pop	r29
+ 350:	cf 91       	pop	r28
+ 352:	1f 91       	pop	r17
+ 354:	0f 91       	pop	r16
+ 356:	ff 90       	pop	r15
+ 358:	08 95       	ret
+
+0000035a <_GLOBAL__sub_I_uart>:
+
+
+#include "myUart.h"
+
+
+myUart uart;
+ 35a:	80 e0       	ldi	r24, 0x00	; 0
+ 35c:	92 e0       	ldi	r25, 0x02	; 2
+ 35e:	8a cf       	rjmp	.-236    	; 0x274 <_ZN6myUartC1Ev>
+ 360:	08 95       	ret
+
+00000362 <_ZN6usonicC1Ev>:
+#include "../usart/myUart.h"
+#include <util/delay.h>
+
+usonic uSonic;
+
+usonic::usonic() :
+ 362:	fc 01       	movw	r30, r24
+	_ready(true),
+	_overflows(0),
+	_distance(0)
+ 364:	81 e0       	ldi	r24, 0x01	; 1
+ 366:	80 83       	st	Z, r24
+ 368:	11 82       	std	Z+1, r1	; 0x01
+ 36a:	13 82       	std	Z+3, r1	; 0x03
+ 36c:	12 82       	std	Z+2, r1	; 0x02
+{
+	
+	// Pin Definitions
+	USONIC_DIR |= (1 << USONIC_TRIGGER_PIN);
+ 36e:	57 9a       	sbi	0x0a, 7	; 10
+	USONIC_PORT &= ~(1 << USONIC_TRIGGER_PIN);
+ 370:	5f 98       	cbi	0x0b, 7	; 11
+	
+	// init Timer
+	USONIC_TIMSK |= (1 << USONIC_TOVF);
+ 372:	e3 e7       	ldi	r30, 0x73	; 115
+ 374:	f0 e0       	ldi	r31, 0x00	; 0
+ 376:	80 81       	ld	r24, Z
+ 378:	81 60       	ori	r24, 0x01	; 1
+ 37a:	80 83       	st	Z, r24
+	USONIC_TRIGGER_IMPULS = 180;
+ 37c:	84 eb       	ldi	r24, 0xB4	; 180
+ 37e:	90 e0       	ldi	r25, 0x00	; 0
+ 380:	90 93 29 01 	sts	0x0129, r25	; 0x800129 <__TEXT_REGION_LENGTH__+0x700129>
+ 384:	80 93 28 01 	sts	0x0128, r24	; 0x800128 <__TEXT_REGION_LENGTH__+0x700128>
+	
+	// init Ext. Interrupts
+	USONIC_ECHO_EICR |= (1 << USONIC_INTERRUPT); // rising and falling edge sense
+ 388:	e9 e6       	ldi	r30, 0x69	; 105
+ 38a:	f0 e0       	ldi	r31, 0x00	; 0
+ 38c:	80 81       	ld	r24, Z
+ 38e:	80 64       	ori	r24, 0x40	; 64
+ 390:	80 83       	st	Z, r24
+ 392:	08 95       	ret
+
+00000394 <_ZN6usonic10bubbleSortERA10_j>:
+}
+
+
+//sort distance array
+void usonic::bubbleSort(uint16_t (&distanceArray)[10])
+{	
+ 394:	1f 93       	push	r17
+ 396:	cf 93       	push	r28
+ 398:	df 93       	push	r29
+ 39a:	16 2f       	mov	r17, r22
+ 39c:	d7 2f       	mov	r29, r23
+ 39e:	6c 5e       	subi	r22, 0xEC	; 236
+ 3a0:	7f 4f       	sbci	r23, 0xFF	; 255
+ 3a2:	c1 e0       	ldi	r28, 0x01	; 1
+			uint16_t distance2 = distanceArray[i + 1];
+			if (distance1 > distance2)
+			{
+				distanceArray[i] = distance2;
+				distanceArray[i + 1] = distance1;
+				bSorted = false;
+ 3a4:	50 e0       	ldi	r21, 0x00	; 0
+ 3a6:	e1 2f       	mov	r30, r17
+ 3a8:	fd 2f       	mov	r31, r29
+}
+
+
+//sort distance array
+void usonic::bubbleSort(uint16_t (&distanceArray)[10])
+{	
+ 3aa:	4c 2f       	mov	r20, r28
+	while (bSorted == false) 
+	{
+		bSorted = true;
+		for (int i = 0; i < 10; ++i)
+		{
+			uint16_t distance1 = distanceArray[i];
+ 3ac:	81 91       	ld	r24, Z+
+ 3ae:	91 91       	ld	r25, Z+
+			uint16_t distance2 = distanceArray[i + 1];
+ 3b0:	20 81       	ld	r18, Z
+ 3b2:	31 81       	ldd	r19, Z+1	; 0x01
+			if (distance1 > distance2)
+ 3b4:	28 17       	cp	r18, r24
+ 3b6:	39 07       	cpc	r19, r25
+ 3b8:	38 f4       	brcc	.+14     	; 0x3c8 <_ZN6usonic10bubbleSortERA10_j+0x34>
+ 3ba:	df 01       	movw	r26, r30
+ 3bc:	12 97       	sbiw	r26, 0x02	; 2
+			{
+				distanceArray[i] = distance2;
+ 3be:	2d 93       	st	X+, r18
+ 3c0:	3c 93       	st	X, r19
+				distanceArray[i + 1] = distance1;
+ 3c2:	91 83       	std	Z+1, r25	; 0x01
+ 3c4:	80 83       	st	Z, r24
+				bSorted = false;
+ 3c6:	45 2f       	mov	r20, r21
+{	
+	bool bSorted = false;
+	while (bSorted == false) 
+	{
+		bSorted = true;
+		for (int i = 0; i < 10; ++i)
+ 3c8:	e6 17       	cp	r30, r22
+ 3ca:	f7 07       	cpc	r31, r23
+ 3cc:	79 f7       	brne	.-34     	; 0x3ac <_ZN6usonic10bubbleSortERA10_j+0x18>
+
+//sort distance array
+void usonic::bubbleSort(uint16_t (&distanceArray)[10])
+{	
+	bool bSorted = false;
+	while (bSorted == false) 
+ 3ce:	44 23       	and	r20, r20
+ 3d0:	51 f3       	breq	.-44     	; 0x3a6 <_ZN6usonic10bubbleSortERA10_j+0x12>
+				distanceArray[i + 1] = distance1;
+				bSorted = false;
+			}
+		}
+	}
+}
+ 3d2:	df 91       	pop	r29
+ 3d4:	cf 91       	pop	r28
+ 3d6:	1f 91       	pop	r17
+ 3d8:	08 95       	ret
+
+000003da <_ZN6usonic15convertDistanceEmj>:
+ * \param[in] The time it took in 62.5 Nanosecond ticks
+ * \param[in] The temperature next to the Ultrasonic Module
+ * \return The distance in cm
+ */
+uint16_t usonic::convertDistance(uint32_t ticks, uint16_t tempAir)
+{
+ 3da:	4f 92       	push	r4
+ 3dc:	5f 92       	push	r5
+ 3de:	6f 92       	push	r6
+ 3e0:	7f 92       	push	r7
+ 3e2:	af 92       	push	r10
+ 3e4:	bf 92       	push	r11
+ 3e6:	cf 92       	push	r12
+ 3e8:	df 92       	push	r13
+ 3ea:	ef 92       	push	r14
+ 3ec:	ff 92       	push	r15
+ 3ee:	0f 93       	push	r16
+ 3f0:	1f 93       	push	r17
+ 3f2:	cf 93       	push	r28
+ 3f4:	df 93       	push	r29
+ 3f6:	ea 01       	movw	r28, r20
+	//ultraSonicSpeed converted to microsecond/centimeter
+	uint16_t ultraSonicConstant = (uint16_t)((uint64_t)600000 * 10000 * 100 / (uint64_t)(ultraSonicSpeed * 60));
+	
+	//(ticks * (Nanoseconds per clock * 1000) / 100 / 2) / 29.1;
+	//2 -> due to the sonic signal traveling back and forth	
+	return (ticks * 6250 / 100 / 2) / ultraSonicConstant;
+ 3f8:	aa e6       	ldi	r26, 0x6A	; 106
+ 3fa:	b8 e1       	ldi	r27, 0x18	; 24
+ 3fc:	9b 01       	movw	r18, r22
+ 3fe:	ac 01       	movw	r20, r24
+ 400:	44 d1       	rcall	.+648    	; 0x68a <__muluhisi3>
+ 402:	28 ec       	ldi	r18, 0xC8	; 200
+ 404:	30 e0       	ldi	r19, 0x00	; 0
+ 406:	40 e0       	ldi	r20, 0x00	; 0
+ 408:	50 e0       	ldi	r21, 0x00	; 0
+ 40a:	1d d1       	rcall	.+570    	; 0x646 <__udivmodsi4>
+ 40c:	29 01       	movw	r4, r18
+ 40e:	3a 01       	movw	r6, r20
+ * \return The distance in cm
+ */
+uint16_t usonic::convertDistance(uint32_t ticks, uint16_t tempAir)
+{
+	//ultraSonicSpeed * 10000 = (Speed at 0 Degree * 10000) + (1 Degree Difference * 1000) * (Degrees * 10))
+	uint32_t ultraSonicSpeed = 3313010 + 606 * tempAir;
+ 410:	8e e5       	ldi	r24, 0x5E	; 94
+ 412:	92 e0       	ldi	r25, 0x02	; 2
+ 414:	c8 9f       	mul	r28, r24
+ 416:	90 01       	movw	r18, r0
+ 418:	c9 9f       	mul	r28, r25
+ 41a:	30 0d       	add	r19, r0
+ 41c:	d8 9f       	mul	r29, r24
+ 41e:	30 0d       	add	r19, r0
+ 420:	11 24       	eor	r1, r1
+ 422:	c9 01       	movw	r24, r18
+ 424:	a0 e0       	ldi	r26, 0x00	; 0
+ 426:	b0 e0       	ldi	r27, 0x00	; 0
+ 428:	9c 01       	movw	r18, r24
+ 42a:	ad 01       	movw	r20, r26
+ 42c:	2e 58       	subi	r18, 0x8E	; 142
+ 42e:	32 47       	sbci	r19, 0x72	; 114
+ 430:	4d 4c       	sbci	r20, 0xCD	; 205
+ 432:	5f 4f       	sbci	r21, 0xFF	; 255
+
+	//ultraSonicSpeed converted to microsecond/centimeter
+	uint16_t ultraSonicConstant = (uint16_t)((uint64_t)600000 * 10000 * 100 / (uint64_t)(ultraSonicSpeed * 60));
+ 434:	ac e3       	ldi	r26, 0x3C	; 60
+ 436:	b0 e0       	ldi	r27, 0x00	; 0
+ 438:	28 d1       	rcall	.+592    	; 0x68a <__muluhisi3>
+ 43a:	dc 01       	movw	r26, r24
+ 43c:	cb 01       	movw	r24, r22
+ 43e:	a8 2e       	mov	r10, r24
+ 440:	b9 2e       	mov	r11, r25
+ 442:	ca 2e       	mov	r12, r26
+ 444:	db 2e       	mov	r13, r27
+ 446:	e1 2c       	mov	r14, r1
+ 448:	f1 2c       	mov	r15, r1
+ 44a:	00 e0       	ldi	r16, 0x00	; 0
+ 44c:	10 e0       	ldi	r17, 0x00	; 0
+ 44e:	20 e0       	ldi	r18, 0x00	; 0
+ 450:	30 e7       	ldi	r19, 0x70	; 112
+ 452:	49 ec       	ldi	r20, 0xC9	; 201
+ 454:	52 eb       	ldi	r21, 0xB2	; 178
+ 456:	6b e8       	ldi	r22, 0x8B	; 139
+ 458:	70 e0       	ldi	r23, 0x00	; 0
+ 45a:	80 e0       	ldi	r24, 0x00	; 0
+ 45c:	90 e0       	ldi	r25, 0x00	; 0
+ 45e:	21 d1       	rcall	.+578    	; 0x6a2 <__udivdi3>
+	
+	//(ticks * (Nanoseconds per clock * 1000) / 100 / 2) / 29.1;
+	//2 -> due to the sonic signal traveling back and forth	
+	return (ticks * 6250 / 100 / 2) / ultraSonicConstant;
+ 460:	40 e0       	ldi	r20, 0x00	; 0
+ 462:	50 e0       	ldi	r21, 0x00	; 0
+ 464:	c3 01       	movw	r24, r6
+ 466:	b2 01       	movw	r22, r4
+ 468:	ee d0       	rcall	.+476    	; 0x646 <__udivmodsi4>
+}
+ 46a:	c9 01       	movw	r24, r18
+ 46c:	df 91       	pop	r29
+ 46e:	cf 91       	pop	r28
+ 470:	1f 91       	pop	r17
+ 472:	0f 91       	pop	r16
+ 474:	ff 90       	pop	r15
+ 476:	ef 90       	pop	r14
+ 478:	df 90       	pop	r13
+ 47a:	cf 90       	pop	r12
+ 47c:	bf 90       	pop	r11
+ 47e:	af 90       	pop	r10
+ 480:	7f 90       	pop	r7
+ 482:	6f 90       	pop	r6
+ 484:	5f 90       	pop	r5
+ 486:	4f 90       	pop	r4
+ 488:	08 95       	ret
+
+0000048a <_ZN6usonic16startMeasurementEv>:
+ * \note Doesn't work if there is currently an ongoing Measurement
+ */
+void usonic::startMeasurement()
+{
+	//Starts a new measurement if last one finished
+	if (_ready)
+ 48a:	fc 01       	movw	r30, r24
+ 48c:	20 81       	ld	r18, Z
+ 48e:	22 23       	and	r18, r18
+ 490:	49 f0       	breq	.+18     	; 0x4a4 <_ZN6usonic16startMeasurementEv+0x1a>
+	{
+		_ready = false;
+ 492:	10 82       	st	Z, r1
+
+		void setDistance(uint16_t millimeter) { _distance = millimeter; }
+		uint16_t getAverageDistance();
+		uint16_t getDistance() { return _distance; }
+		
+		void setOverflows(uint8_t overflows) { _overflows = overflows; }
+ 494:	10 92 03 02 	sts	0x0203, r1	; 0x800203 <uSonic+0x1>
+		uSonic.setOverflows(0);
+			
+		//Start a timer so that the Trigger signal is at least 10�s long
+		USONIC_PORT |= (1 << USONIC_TRIGGER_PIN);
+ 498:	5f 9a       	sbi	0x0b, 7	; 11
+		USONIC_PRESCALER1();
+ 49a:	e1 e2       	ldi	r30, 0x21	; 33
+ 49c:	f1 e0       	ldi	r31, 0x01	; 1
+ 49e:	80 81       	ld	r24, Z
+ 4a0:	81 60       	ori	r24, 0x01	; 1
+ 4a2:	80 83       	st	Z, r24
+ 4a4:	08 95       	ret
+
+000004a6 <_ZN6usonic18getAverageDistanceEv>:
+		}
+	}
+}
+
+uint16_t usonic::getAverageDistance()
+{	
+ 4a6:	4f 92       	push	r4
+ 4a8:	5f 92       	push	r5
+ 4aa:	6f 92       	push	r6
+ 4ac:	7f 92       	push	r7
+ 4ae:	8f 92       	push	r8
+ 4b0:	9f 92       	push	r9
+ 4b2:	af 92       	push	r10
+ 4b4:	bf 92       	push	r11
+ 4b6:	cf 92       	push	r12
+ 4b8:	df 92       	push	r13
+ 4ba:	ef 92       	push	r14
+ 4bc:	ff 92       	push	r15
+ 4be:	0f 93       	push	r16
+ 4c0:	1f 93       	push	r17
+ 4c2:	cf 93       	push	r28
+ 4c4:	df 93       	push	r29
+ 4c6:	cd b7       	in	r28, 0x3d	; 61
+ 4c8:	de b7       	in	r29, 0x3e	; 62
+ 4ca:	64 97       	sbiw	r28, 0x14	; 20
+ 4cc:	0f b6       	in	r0, 0x3f	; 63
+ 4ce:	f8 94       	cli
+ 4d0:	de bf       	out	0x3e, r29	; 62
+ 4d2:	0f be       	out	0x3f, r0	; 63
+ 4d4:	cd bf       	out	0x3d, r28	; 61
+ 4d6:	8c 01       	movw	r16, r24
+	USONIC_TIMSK |= (1 << USONIC_OCRA);
+ 4d8:	e3 e7       	ldi	r30, 0x73	; 115
+ 4da:	f0 e0       	ldi	r31, 0x00	; 0
+ 4dc:	80 81       	ld	r24, Z
+ 4de:	82 60       	ori	r24, 0x02	; 2
+ 4e0:	80 83       	st	Z, r24
+ 4e2:	ae 01       	movw	r20, r28
+ 4e4:	4f 5f       	subi	r20, 0xFF	; 255
+ 4e6:	5f 4f       	sbci	r21, 0xFF	; 255
+ 4e8:	7a 01       	movw	r14, r20
+ 4ea:	5e 01       	movw	r10, r28
+ 4ec:	55 e1       	ldi	r21, 0x15	; 21
+ 4ee:	a5 0e       	add	r10, r21
+ 4f0:	b1 1c       	adc	r11, r1
+ 4f2:	67 01       	movw	r12, r14
+	
+	uint16_t measureDistances[10];
+	for (uint8_t i = 0; i < 10; i++)
+	{			
+		startMeasurement();		
+ 4f4:	c8 01       	movw	r24, r16
+ 4f6:	c9 df       	rcall	.-110    	; 0x48a <_ZN6usonic16startMeasurementEv>
+		
+		while(!_ready) {
+ 4f8:	f8 01       	movw	r30, r16
+ 4fa:	80 81       	ld	r24, Z
+ 4fc:	81 11       	cpse	r24, r1
+ 4fe:	08 c0       	rjmp	.+16     	; 0x510 <_ZN6usonic18getAverageDistanceEv+0x6a>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 500:	f5 e3       	ldi	r31, 0x35	; 53
+ 502:	fa 95       	dec	r31
+ 504:	f1 f7       	brne	.-4      	; 0x502 <_ZN6usonic18getAverageDistanceEv+0x5c>
+ 506:	00 00       	nop
+ 508:	f8 01       	movw	r30, r16
+ 50a:	90 81       	ld	r25, Z
+ 50c:	99 23       	and	r25, r25
+ 50e:	c1 f3       	breq	.-16     	; 0x500 <_ZN6usonic18getAverageDistanceEv+0x5a>
+			_delay_us(10);
+		}
+				
+		int distance = getDistance();
+		measureDistances[i] = distance;
+ 510:	f8 01       	movw	r30, r16
+ 512:	82 81       	ldd	r24, Z+2	; 0x02
+ 514:	93 81       	ldd	r25, Z+3	; 0x03
+ 516:	f6 01       	movw	r30, r12
+ 518:	81 93       	st	Z+, r24
+ 51a:	91 93       	st	Z+, r25
+ 51c:	6f 01       	movw	r12, r30
+uint16_t usonic::getAverageDistance()
+{	
+	USONIC_TIMSK |= (1 << USONIC_OCRA);
+	
+	uint16_t measureDistances[10];
+	for (uint8_t i = 0; i < 10; i++)
+ 51e:	ea 15       	cp	r30, r10
+ 520:	fb 05       	cpc	r31, r11
+ 522:	41 f7       	brne	.-48     	; 0x4f4 <_ZN6usonic18getAverageDistanceEv+0x4e>
+		}
+				
+		int distance = getDistance();
+		measureDistances[i] = distance;
+	}
+	USONIC_TIMSK &= ~(1 << USONIC_OCRA);
+ 524:	e3 e7       	ldi	r30, 0x73	; 115
+ 526:	f0 e0       	ldi	r31, 0x00	; 0
+ 528:	80 81       	ld	r24, Z
+ 52a:	8d 7f       	andi	r24, 0xFD	; 253
+ 52c:	80 83       	st	Z, r24
+	{
+		//uart.write((uint16_t)measureDistances[i]);
+	}
+	
+	//Sort the Values
+	bubbleSort(measureDistances);
+ 52e:	be 01       	movw	r22, r28
+ 530:	6f 5f       	subi	r22, 0xFF	; 255
+ 532:	7f 4f       	sbci	r23, 0xFF	; 255
+ 534:	c8 01       	movw	r24, r16
+ 536:	2e df       	rcall	.-420    	; 0x394 <_ZN6usonic10bubbleSortERA10_j>
+		{
+			//uart.write((uint16_t)measureDistances[i], true);
+		}
+			
+	//Remove all the values that vary 5% of the compare Value
+	uint16_t compareValue = (measureDistances[4] + measureDistances[5]) / 2;
+ 538:	4b 84       	ldd	r4, Y+11	; 0x0b
+ 53a:	5c 84       	ldd	r5, Y+12	; 0x0c
+ 53c:	89 85       	ldd	r24, Y+9	; 0x09
+ 53e:	9a 85       	ldd	r25, Y+10	; 0x0a
+ 540:	48 0e       	add	r4, r24
+ 542:	59 1e       	adc	r5, r25
+ 544:	56 94       	lsr	r5
+ 546:	47 94       	ror	r4
+	uint8_t lowIndex = 0, highIndex = 9;
+	
+	for (uint8_t i = 0; i < 10; ++i)
+	{
+		if (measureDistances[i] < (uint32_t)compareValue * 95 / 100)
+ 548:	61 2c       	mov	r6, r1
+ 54a:	71 2c       	mov	r7, r1
+ 54c:	af e5       	ldi	r26, 0x5F	; 95
+ 54e:	b0 e0       	ldi	r27, 0x00	; 0
+ 550:	a3 01       	movw	r20, r6
+ 552:	92 01       	movw	r18, r4
+ 554:	9a d0       	rcall	.+308    	; 0x68a <__muluhisi3>
+ 556:	24 e6       	ldi	r18, 0x64	; 100
+ 558:	30 e0       	ldi	r19, 0x00	; 0
+ 55a:	40 e0       	ldi	r20, 0x00	; 0
+ 55c:	50 e0       	ldi	r21, 0x00	; 0
+ 55e:	73 d0       	rcall	.+230    	; 0x646 <__udivmodsi4>
+ 560:	49 01       	movw	r8, r18
+ 562:	5a 01       	movw	r10, r20
+		{
+			lowIndex = i;
+		}
+		else if (measureDistances[i] > (uint32_t)compareValue * 105 / 100)
+ 564:	a9 e6       	ldi	r26, 0x69	; 105
+ 566:	b0 e0       	ldi	r27, 0x00	; 0
+ 568:	a3 01       	movw	r20, r6
+ 56a:	92 01       	movw	r18, r4
+ 56c:	8e d0       	rcall	.+284    	; 0x68a <__muluhisi3>
+ 56e:	24 e6       	ldi	r18, 0x64	; 100
+ 570:	30 e0       	ldi	r19, 0x00	; 0
+ 572:	40 e0       	ldi	r20, 0x00	; 0
+ 574:	50 e0       	ldi	r21, 0x00	; 0
+ 576:	67 d0       	rcall	.+206    	; 0x646 <__udivmodsi4>
+ 578:	89 01       	movw	r16, r18
+ 57a:	9a 01       	movw	r18, r20
+			
+	//Remove all the values that vary 5% of the compare Value
+	uint16_t compareValue = (measureDistances[4] + measureDistances[5]) / 2;
+	uint8_t lowIndex = 0, highIndex = 9;
+	
+	for (uint8_t i = 0; i < 10; ++i)
+ 57c:	80 e0       	ldi	r24, 0x00	; 0
+			//uart.write((uint16_t)measureDistances[i], true);
+		}
+			
+	//Remove all the values that vary 5% of the compare Value
+	uint16_t compareValue = (measureDistances[4] + measureDistances[5]) / 2;
+	uint8_t lowIndex = 0, highIndex = 9;
+ 57e:	90 e0       	ldi	r25, 0x00	; 0
+	
+	for (uint8_t i = 0; i < 10; ++i)
+	{
+		if (measureDistances[i] < (uint32_t)compareValue * 95 / 100)
+ 580:	f7 01       	movw	r30, r14
+ 582:	41 91       	ld	r20, Z+
+ 584:	51 91       	ld	r21, Z+
+ 586:	7f 01       	movw	r14, r30
+ 588:	60 e0       	ldi	r22, 0x00	; 0
+ 58a:	70 e0       	ldi	r23, 0x00	; 0
+ 58c:	48 15       	cp	r20, r8
+ 58e:	59 05       	cpc	r21, r9
+ 590:	6a 05       	cpc	r22, r10
+ 592:	7b 05       	cpc	r23, r11
+ 594:	40 f0       	brcs	.+16     	; 0x5a6 <_ZN6usonic18getAverageDistanceEv+0x100>
+		{
+			lowIndex = i;
+		}
+		else if (measureDistances[i] > (uint32_t)compareValue * 105 / 100)
+ 596:	04 17       	cp	r16, r20
+ 598:	15 07       	cpc	r17, r21
+ 59a:	26 07       	cpc	r18, r22
+ 59c:	37 07       	cpc	r19, r23
+ 59e:	20 f4       	brcc	.+8      	; 0x5a8 <_ZN6usonic18getAverageDistanceEv+0x102>
+		{
+			highIndex = i + 1;
+ 5a0:	21 e0       	ldi	r18, 0x01	; 1
+ 5a2:	28 0f       	add	r18, r24
+			break;
+ 5a4:	05 c0       	rjmp	.+10     	; 0x5b0 <_ZN6usonic18getAverageDistanceEv+0x10a>
+ 5a6:	98 2f       	mov	r25, r24
+			
+	//Remove all the values that vary 5% of the compare Value
+	uint16_t compareValue = (measureDistances[4] + measureDistances[5]) / 2;
+	uint8_t lowIndex = 0, highIndex = 9;
+	
+	for (uint8_t i = 0; i < 10; ++i)
+ 5a8:	8f 5f       	subi	r24, 0xFF	; 255
+ 5aa:	8a 30       	cpi	r24, 0x0A	; 10
+ 5ac:	49 f7       	brne	.-46     	; 0x580 <_ZN6usonic18getAverageDistanceEv+0xda>
+			//uart.write((uint16_t)measureDistances[i], true);
+		}
+			
+	//Remove all the values that vary 5% of the compare Value
+	uint16_t compareValue = (measureDistances[4] + measureDistances[5]) / 2;
+	uint8_t lowIndex = 0, highIndex = 9;
+ 5ae:	29 e0       	ldi	r18, 0x09	; 9
+	
+	//uart.write("|high|=>", true);	
+	//uart.write(highIndex, true);
+	//
+	////Test output Usart
+	for (uint8_t i = lowIndex; i < highIndex; i++)
+ 5b0:	92 17       	cp	r25, r18
+ 5b2:	00 f5       	brcc	.+64     	; 0x5f4 <_ZN6usonic18getAverageDistanceEv+0x14e>
+ 5b4:	89 2f       	mov	r24, r25
+ 5b6:	8f 5f       	subi	r24, 0xFF	; 255
+ 5b8:	82 13       	cpse	r24, r18
+ 5ba:	fd cf       	rjmp	.-6      	; 0x5b6 <_ZN6usonic18getAverageDistanceEv+0x110>
+ 5bc:	89 2f       	mov	r24, r25
+ 5be:	c1 2c       	mov	r12, r1
+ 5c0:	d1 2c       	mov	r13, r1
+ 5c2:	76 01       	movw	r14, r12
+	}
+
+	uint32_t averageValue = 0;
+	for (uint8_t i = lowIndex; i < highIndex; ++i)
+	{
+		averageValue += measureDistances[i];
+ 5c4:	e8 2f       	mov	r30, r24
+ 5c6:	f0 e0       	ldi	r31, 0x00	; 0
+ 5c8:	ee 0f       	add	r30, r30
+ 5ca:	ff 1f       	adc	r31, r31
+ 5cc:	41 e0       	ldi	r20, 0x01	; 1
+ 5ce:	50 e0       	ldi	r21, 0x00	; 0
+ 5d0:	4c 0f       	add	r20, r28
+ 5d2:	5d 1f       	adc	r21, r29
+ 5d4:	e4 0f       	add	r30, r20
+ 5d6:	f5 1f       	adc	r31, r21
+ 5d8:	40 81       	ld	r20, Z
+ 5da:	51 81       	ldd	r21, Z+1	; 0x01
+ 5dc:	c4 0e       	add	r12, r20
+ 5de:	d5 1e       	adc	r13, r21
+ 5e0:	e1 1c       	adc	r14, r1
+ 5e2:	f1 1c       	adc	r15, r1
+		//uart.write("|mesureD|==>");
+		//uart.write((long)measureDistances[i]);
+	}
+
+	uint32_t averageValue = 0;
+	for (uint8_t i = lowIndex; i < highIndex; ++i)
+ 5e4:	8f 5f       	subi	r24, 0xFF	; 255
+ 5e6:	82 13       	cpse	r24, r18
+ 5e8:	ed cf       	rjmp	.-38     	; 0x5c4 <_ZN6usonic18getAverageDistanceEv+0x11e>
+ 5ea:	89 2f       	mov	r24, r25
+		averageValue += measureDistances[i];
+	}
+	//uart.write("|averageValue|=>");
+	//uart.write((long)averageValue / (highIndex - lowIndex));
+	
+	for (uint8_t i = lowIndex; i < highIndex; i++)
+ 5ec:	8f 5f       	subi	r24, 0xFF	; 255
+ 5ee:	82 17       	cp	r24, r18
+ 5f0:	e8 f3       	brcs	.-6      	; 0x5ec <_ZN6usonic18getAverageDistanceEv+0x146>
+ 5f2:	03 c0       	rjmp	.+6      	; 0x5fa <_ZN6usonic18getAverageDistanceEv+0x154>
+	{
+		//uart.write("|mesureD|==>");
+		//uart.write((long)measureDistances[i]);
+	}
+
+	uint32_t averageValue = 0;
+ 5f4:	c1 2c       	mov	r12, r1
+ 5f6:	d1 2c       	mov	r13, r1
+ 5f8:	76 01       	movw	r14, r12
+	{
+		//uart.write("|mesureD|=>");
+		//uart.write((long)measureDistances[i]);
+	}
+	
+	return averageValue / (highIndex - lowIndex);
+ 5fa:	30 e0       	ldi	r19, 0x00	; 0
+ 5fc:	29 1b       	sub	r18, r25
+ 5fe:	31 09       	sbc	r19, r1
+ 600:	03 2e       	mov	r0, r19
+ 602:	00 0c       	add	r0, r0
+ 604:	44 0b       	sbc	r20, r20
+ 606:	55 0b       	sbc	r21, r21
+ 608:	c7 01       	movw	r24, r14
+ 60a:	b6 01       	movw	r22, r12
+ 60c:	1c d0       	rcall	.+56     	; 0x646 <__udivmodsi4>
+
+}
+ 60e:	c9 01       	movw	r24, r18
+ 610:	64 96       	adiw	r28, 0x14	; 20
+ 612:	0f b6       	in	r0, 0x3f	; 63
+ 614:	f8 94       	cli
+ 616:	de bf       	out	0x3e, r29	; 62
+ 618:	0f be       	out	0x3f, r0	; 63
+ 61a:	cd bf       	out	0x3d, r28	; 61
+ 61c:	df 91       	pop	r29
+ 61e:	cf 91       	pop	r28
+ 620:	1f 91       	pop	r17
+ 622:	0f 91       	pop	r16
+ 624:	ff 90       	pop	r15
+ 626:	ef 90       	pop	r14
+ 628:	df 90       	pop	r13
+ 62a:	cf 90       	pop	r12
+ 62c:	bf 90       	pop	r11
+ 62e:	af 90       	pop	r10
+ 630:	9f 90       	pop	r9
+ 632:	8f 90       	pop	r8
+ 634:	7f 90       	pop	r7
+ 636:	6f 90       	pop	r6
+ 638:	5f 90       	pop	r5
+ 63a:	4f 90       	pop	r4
+ 63c:	08 95       	ret
+
+0000063e <_GLOBAL__sub_I_uSonic>:
+
+#include "../configuration.h"
+#include "../usart/myUart.h"
+#include <util/delay.h>
+
+usonic uSonic;
+ 63e:	82 e0       	ldi	r24, 0x02	; 2
+ 640:	92 e0       	ldi	r25, 0x02	; 2
+ 642:	8f ce       	rjmp	.-738    	; 0x362 <_ZN6usonicC1Ev>
+ 644:	08 95       	ret
+
+00000646 <__udivmodsi4>:
+ 646:	a1 e2       	ldi	r26, 0x21	; 33
+ 648:	1a 2e       	mov	r1, r26
+ 64a:	aa 1b       	sub	r26, r26
+ 64c:	bb 1b       	sub	r27, r27
+ 64e:	fd 01       	movw	r30, r26
+ 650:	0d c0       	rjmp	.+26     	; 0x66c <__udivmodsi4_ep>
+
+00000652 <__udivmodsi4_loop>:
+ 652:	aa 1f       	adc	r26, r26
+ 654:	bb 1f       	adc	r27, r27
+ 656:	ee 1f       	adc	r30, r30
+ 658:	ff 1f       	adc	r31, r31
+ 65a:	a2 17       	cp	r26, r18
+ 65c:	b3 07       	cpc	r27, r19
+ 65e:	e4 07       	cpc	r30, r20
+ 660:	f5 07       	cpc	r31, r21
+ 662:	20 f0       	brcs	.+8      	; 0x66c <__udivmodsi4_ep>
+ 664:	a2 1b       	sub	r26, r18
+ 666:	b3 0b       	sbc	r27, r19
+ 668:	e4 0b       	sbc	r30, r20
+ 66a:	f5 0b       	sbc	r31, r21
+
+0000066c <__udivmodsi4_ep>:
+ 66c:	66 1f       	adc	r22, r22
+ 66e:	77 1f       	adc	r23, r23
+ 670:	88 1f       	adc	r24, r24
+ 672:	99 1f       	adc	r25, r25
+ 674:	1a 94       	dec	r1
+ 676:	69 f7       	brne	.-38     	; 0x652 <__udivmodsi4_loop>
+ 678:	60 95       	com	r22
+ 67a:	70 95       	com	r23
+ 67c:	80 95       	com	r24
+ 67e:	90 95       	com	r25
+ 680:	9b 01       	movw	r18, r22
+ 682:	ac 01       	movw	r20, r24
+ 684:	bd 01       	movw	r22, r26
+ 686:	cf 01       	movw	r24, r30
+ 688:	08 95       	ret
+
+0000068a <__muluhisi3>:
+ 68a:	6f d0       	rcall	.+222    	; 0x76a <__umulhisi3>
+ 68c:	a5 9f       	mul	r26, r21
+ 68e:	90 0d       	add	r25, r0
+ 690:	b4 9f       	mul	r27, r20
+ 692:	90 0d       	add	r25, r0
+ 694:	a4 9f       	mul	r26, r20
+ 696:	80 0d       	add	r24, r0
+ 698:	91 1d       	adc	r25, r1
+ 69a:	11 24       	eor	r1, r1
+ 69c:	08 95       	ret
+
+0000069e <__umoddi3>:
+ 69e:	68 94       	set
+ 6a0:	01 c0       	rjmp	.+2      	; 0x6a4 <__udivdi3_umoddi3>
+
+000006a2 <__udivdi3>:
+ 6a2:	e8 94       	clt
+
+000006a4 <__udivdi3_umoddi3>:
+ 6a4:	8f 92       	push	r8
+ 6a6:	9f 92       	push	r9
+ 6a8:	cf 93       	push	r28
+ 6aa:	df 93       	push	r29
+ 6ac:	05 d0       	rcall	.+10     	; 0x6b8 <__udivmod64>
+ 6ae:	df 91       	pop	r29
+ 6b0:	cf 91       	pop	r28
+ 6b2:	9f 90       	pop	r9
+ 6b4:	8f 90       	pop	r8
+ 6b6:	08 95       	ret
+
+000006b8 <__udivmod64>:
+ 6b8:	88 24       	eor	r8, r8
+ 6ba:	99 24       	eor	r9, r9
+ 6bc:	f4 01       	movw	r30, r8
+ 6be:	e4 01       	movw	r28, r8
+ 6c0:	b0 e4       	ldi	r27, 0x40	; 64
+ 6c2:	9f 93       	push	r25
+ 6c4:	aa 27       	eor	r26, r26
+ 6c6:	9a 15       	cp	r25, r10
+ 6c8:	8b 04       	cpc	r8, r11
+ 6ca:	9c 04       	cpc	r9, r12
+ 6cc:	ed 05       	cpc	r30, r13
+ 6ce:	fe 05       	cpc	r31, r14
+ 6d0:	cf 05       	cpc	r28, r15
+ 6d2:	d0 07       	cpc	r29, r16
+ 6d4:	a1 07       	cpc	r26, r17
+ 6d6:	98 f4       	brcc	.+38     	; 0x6fe <__udivmod64+0x46>
+ 6d8:	ad 2f       	mov	r26, r29
+ 6da:	dc 2f       	mov	r29, r28
+ 6dc:	cf 2f       	mov	r28, r31
+ 6de:	fe 2f       	mov	r31, r30
+ 6e0:	e9 2d       	mov	r30, r9
+ 6e2:	98 2c       	mov	r9, r8
+ 6e4:	89 2e       	mov	r8, r25
+ 6e6:	98 2f       	mov	r25, r24
+ 6e8:	87 2f       	mov	r24, r23
+ 6ea:	76 2f       	mov	r23, r22
+ 6ec:	65 2f       	mov	r22, r21
+ 6ee:	54 2f       	mov	r21, r20
+ 6f0:	43 2f       	mov	r20, r19
+ 6f2:	32 2f       	mov	r19, r18
+ 6f4:	22 27       	eor	r18, r18
+ 6f6:	b8 50       	subi	r27, 0x08	; 8
+ 6f8:	31 f7       	brne	.-52     	; 0x6c6 <__udivmod64+0xe>
+ 6fa:	bf 91       	pop	r27
+ 6fc:	27 c0       	rjmp	.+78     	; 0x74c <__udivmod64+0x94>
+ 6fe:	1b 2e       	mov	r1, r27
+ 700:	bf 91       	pop	r27
+ 702:	bb 27       	eor	r27, r27
+ 704:	22 0f       	add	r18, r18
+ 706:	33 1f       	adc	r19, r19
+ 708:	44 1f       	adc	r20, r20
+ 70a:	55 1f       	adc	r21, r21
+ 70c:	66 1f       	adc	r22, r22
+ 70e:	77 1f       	adc	r23, r23
+ 710:	88 1f       	adc	r24, r24
+ 712:	99 1f       	adc	r25, r25
+ 714:	88 1c       	adc	r8, r8
+ 716:	99 1c       	adc	r9, r9
+ 718:	ee 1f       	adc	r30, r30
+ 71a:	ff 1f       	adc	r31, r31
+ 71c:	cc 1f       	adc	r28, r28
+ 71e:	dd 1f       	adc	r29, r29
+ 720:	aa 1f       	adc	r26, r26
+ 722:	bb 1f       	adc	r27, r27
+ 724:	8a 14       	cp	r8, r10
+ 726:	9b 04       	cpc	r9, r11
+ 728:	ec 05       	cpc	r30, r12
+ 72a:	fd 05       	cpc	r31, r13
+ 72c:	ce 05       	cpc	r28, r14
+ 72e:	df 05       	cpc	r29, r15
+ 730:	a0 07       	cpc	r26, r16
+ 732:	b1 07       	cpc	r27, r17
+ 734:	48 f0       	brcs	.+18     	; 0x748 <__udivmod64+0x90>
+ 736:	8a 18       	sub	r8, r10
+ 738:	9b 08       	sbc	r9, r11
+ 73a:	ec 09       	sbc	r30, r12
+ 73c:	fd 09       	sbc	r31, r13
+ 73e:	ce 09       	sbc	r28, r14
+ 740:	df 09       	sbc	r29, r15
+ 742:	a0 0b       	sbc	r26, r16
+ 744:	b1 0b       	sbc	r27, r17
+ 746:	21 60       	ori	r18, 0x01	; 1
+ 748:	1a 94       	dec	r1
+ 74a:	e1 f6       	brne	.-72     	; 0x704 <__udivmod64+0x4c>
+ 74c:	2e f4       	brtc	.+10     	; 0x758 <__udivmod64+0xa0>
+ 74e:	94 01       	movw	r18, r8
+ 750:	af 01       	movw	r20, r30
+ 752:	be 01       	movw	r22, r28
+ 754:	cd 01       	movw	r24, r26
+ 756:	00 0c       	add	r0, r0
+ 758:	08 95       	ret
+
+0000075a <__tablejump2__>:
+ 75a:	ee 0f       	add	r30, r30
+ 75c:	ff 1f       	adc	r31, r31
+ 75e:	88 1f       	adc	r24, r24
+ 760:	8b bf       	out	0x3b, r24	; 59
+ 762:	07 90       	elpm	r0, Z+
+ 764:	f6 91       	elpm	r31, Z
+ 766:	e0 2d       	mov	r30, r0
+ 768:	19 94       	eijmp
+
+0000076a <__umulhisi3>:
+ 76a:	a2 9f       	mul	r26, r18
+ 76c:	b0 01       	movw	r22, r0
+ 76e:	b3 9f       	mul	r27, r19
+ 770:	c0 01       	movw	r24, r0
+ 772:	a3 9f       	mul	r26, r19
+ 774:	70 0d       	add	r23, r0
+ 776:	81 1d       	adc	r24, r1
+ 778:	11 24       	eor	r1, r1
+ 77a:	91 1d       	adc	r25, r1
+ 77c:	b2 9f       	mul	r27, r18
+ 77e:	70 0d       	add	r23, r0
+ 780:	81 1d       	adc	r24, r1
+ 782:	11 24       	eor	r1, r1
+ 784:	91 1d       	adc	r25, r1
+ 786:	08 95       	ret
+
+00000788 <__itoa_ncheck>:
+ 788:	bb 27       	eor	r27, r27
+ 78a:	4a 30       	cpi	r20, 0x0A	; 10
+ 78c:	31 f4       	brne	.+12     	; 0x79a <__itoa_ncheck+0x12>
+ 78e:	99 23       	and	r25, r25
+ 790:	22 f4       	brpl	.+8      	; 0x79a <__itoa_ncheck+0x12>
+ 792:	bd e2       	ldi	r27, 0x2D	; 45
+ 794:	90 95       	com	r25
+ 796:	81 95       	neg	r24
+ 798:	9f 4f       	sbci	r25, 0xFF	; 255
+ 79a:	01 c0       	rjmp	.+2      	; 0x79e <__utoa_common>
+
+0000079c <__utoa_ncheck>:
+ 79c:	bb 27       	eor	r27, r27
+
+0000079e <__utoa_common>:
+ 79e:	fb 01       	movw	r30, r22
+ 7a0:	55 27       	eor	r21, r21
+ 7a2:	aa 27       	eor	r26, r26
+ 7a4:	88 0f       	add	r24, r24
+ 7a6:	99 1f       	adc	r25, r25
+ 7a8:	aa 1f       	adc	r26, r26
+ 7aa:	a4 17       	cp	r26, r20
+ 7ac:	10 f0       	brcs	.+4      	; 0x7b2 <__utoa_common+0x14>
+ 7ae:	a4 1b       	sub	r26, r20
+ 7b0:	83 95       	inc	r24
+ 7b2:	50 51       	subi	r21, 0x10	; 16
+ 7b4:	b9 f7       	brne	.-18     	; 0x7a4 <__utoa_common+0x6>
+ 7b6:	a0 5d       	subi	r26, 0xD0	; 208
+ 7b8:	aa 33       	cpi	r26, 0x3A	; 58
+ 7ba:	08 f0       	brcs	.+2      	; 0x7be <__utoa_common+0x20>
+ 7bc:	a9 5d       	subi	r26, 0xD9	; 217
+ 7be:	a1 93       	st	Z+, r26
+ 7c0:	00 97       	sbiw	r24, 0x00	; 0
+ 7c2:	79 f7       	brne	.-34     	; 0x7a2 <__utoa_common+0x4>
+ 7c4:	b1 11       	cpse	r27, r1
+ 7c6:	b1 93       	st	Z+, r27
+ 7c8:	11 92       	st	Z+, r1
+ 7ca:	cb 01       	movw	r24, r22
+ 7cc:	00 c0       	rjmp	.+0      	; 0x7ce <strrev>
+
+000007ce <strrev>:
+ 7ce:	dc 01       	movw	r26, r24
+ 7d0:	fc 01       	movw	r30, r24
+ 7d2:	67 2f       	mov	r22, r23
+ 7d4:	71 91       	ld	r23, Z+
+ 7d6:	77 23       	and	r23, r23
+ 7d8:	e1 f7       	brne	.-8      	; 0x7d2 <strrev+0x4>
+ 7da:	32 97       	sbiw	r30, 0x02	; 2
+ 7dc:	04 c0       	rjmp	.+8      	; 0x7e6 <strrev+0x18>
+ 7de:	7c 91       	ld	r23, X
+ 7e0:	6d 93       	st	X+, r22
+ 7e2:	70 83       	st	Z, r23
+ 7e4:	62 91       	ld	r22, -Z
+ 7e6:	ae 17       	cp	r26, r30
+ 7e8:	bf 07       	cpc	r27, r31
+ 7ea:	c8 f3       	brcs	.-14     	; 0x7de <strrev+0x10>
+ 7ec:	08 95       	ret
+
+000007ee <_exit>:
+ 7ee:	f8 94       	cli
+
+000007f0 <__stop_program>:
+ 7f0:	ff cf       	rjmp	.-2      	; 0x7f0 <__stop_program>
